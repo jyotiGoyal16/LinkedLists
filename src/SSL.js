@@ -1,3 +1,6 @@
+//Singly Linked List
+
+//for creating nodes of list
 class Node {
   constructor(data) {
     this.data = data;
@@ -5,12 +8,14 @@ class Node {
   }
 }
 
+//for constructing singly linked list
 class LinkedList {
   constructor() {
     this.head = null;
     this.size = 0;
   }
 
+  //Add data to the end of the list
   add(data) {
     let newNode = new Node(data);
     if (!this.head) {
@@ -25,6 +30,7 @@ class LinkedList {
     this.size++;
   }
 
+  //insert data at a given index
   insertAt(index, data) {
     if (index < 0 || index > this.size) {
       console.log("Please enter a valid index");
@@ -48,6 +54,7 @@ class LinkedList {
     this.size++;
   }
 
+  //remove data from a given index
   removeFrom(index) {
     if (index < 0 || index > this.size) {
       console.log("Please enter a valid index");
@@ -70,6 +77,7 @@ class LinkedList {
     this.size--;
   }
 
+  //remove a particular node with the given data
   removeElement(data) {
     let current = this.head;
     let previous = null;
@@ -89,10 +97,14 @@ class LinkedList {
     }
   }
 
+  //HELPER FUNCTIONS
+  
+  //get the size of the linked list
   sizeOfList() {
     console.log("list size: ", this.size);
   }
 
+  //get the index of the linked list element
   indexOf(data) {
     let current = this.head;
     let index = 0;
@@ -107,10 +119,12 @@ class LinkedList {
     }
   }
 
+  //check if the list is empty or not
   isEmpty() {
     return this.size === 0;
   }
 
+  //print the contents of a linked list
   printList() {
     let current = this.head;
     while (current) {
