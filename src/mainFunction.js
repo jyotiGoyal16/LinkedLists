@@ -1,4 +1,10 @@
 import LinkedList from "./SSL";
+import { 
+  findNthNodeFromEnd, 
+  findNthNodeFromEnd2, 
+  findNthNodeFromEnd3,
+  findNthNodeFromEnd4
+} from "./findNthNodeFromEnd";
 
 let list = new LinkedList(); // e.g 1 --> 2 --> 3 --> 4 --> 5 --> 6
 console.log("isEmptyList:", list.isEmpty());
@@ -31,3 +37,6 @@ console.log("Index of element 2:", list.indexOf(2));
 list.removeElement(5); // 1 6 3 2 7 8
 list.printList();
 list.sizeOfList();
+
+//find nth node from end of the list
+findNthNodeFromEnd4(list.head, 2);
