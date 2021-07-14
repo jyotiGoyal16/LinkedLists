@@ -6,6 +6,8 @@ import {
   findNthNodeFromEnd4
 } from "./findNthNodeFromEnd";
 import {detectLoop, efficientDetectLoop} from "./detectLoopInList";
+import {findLoopStartingNode} from "./findLoopStartNode";
+import {findLoopLength} from "./findLoopLength";
 
 let list = new LinkedList(); // e.g 1 --> 2 --> 3 --> 4 --> 5 --> 6
 console.log("isEmptyList:", list.isEmpty());
@@ -42,3 +44,5 @@ list.sizeOfList();
 //find nth node from end of the list
 findNthNodeFromEnd4(list.head, 2);
 efficientDetectLoop(list.head); //create a loop in the list for checking this
+findLoopStartingNode(list.head);
+findLoopLength(list.head);
